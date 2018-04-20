@@ -5,6 +5,7 @@ yum -y install nagios
 
 systemctl enable nagios
 systemctl start nagios
+setenforce 0
 
 yum install -y httpd nagios-selinux
 
