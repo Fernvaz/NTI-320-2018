@@ -1,0 +1,11 @@
+
+
+
+    1  yum -y install net-snmp
+    2  systemctl enable snmp
+    3  systemctl enable snmpd
+    4  systemctl start snmpd
+    5  yum -y install net-snmp-utils
+    
+    ## To check that the everything is installed properly, use the commnad below
+    6  snmpwalk -v 1 -c public -O e 127.0.0.1 | more
