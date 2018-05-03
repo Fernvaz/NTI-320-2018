@@ -1,0 +1,9 @@
+!#/bin/bash
+
+sudo su       
+yum install -y net-snmp
+systemctl enable snmpd
+systemctl start snmpd
+yum install -y net-snmp-utils
+# command below is to test our install and to check if it works.
+snmpwalk -v 1 -c public -O e 127.0.0.1 
